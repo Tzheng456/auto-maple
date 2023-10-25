@@ -64,10 +64,10 @@ class File(MenuBarItem):
                                     'Would you like to proceed anyways?',
                             icon='warning'):
                 return
-        file_path = './resources/routines/luminous/test2.csv'
-        # file_path = askopenfilename(initialdir=get_routines_dir(),
-        #                             title='Select a routine',
-        #                             filetypes=[('*.csv', '*.csv')])
+        # file_path = './resources/routines/luminous/test2.csv'
+        file_path = askopenfilename(initialdir=get_routines_dir(),
+                                    title='Select a routine',
+                                    filetypes=[('*.csv', '*.csv')])
         if file_path:
             config.routine.load(file_path)
 
@@ -80,10 +80,10 @@ class File(MenuBarItem):
                                     'which has unsaved changes. Would you like to proceed anyways?',
                             icon='warning'):
                 return
-        file_path = './resources/command_books/luminous.py'
-        # file_path = askopenfilename(initialdir=os.path.join(config.RESOURCES_DIR, 'command_books'),
-        #                             title='Select a command book',
-        #                             filetypes=[('*.py', '*.py')])
+        # file_path = './resources/command_books/luminous.py'
+        file_path = askopenfilename(initialdir=os.path.join(config.RESOURCES_DIR, 'command_books'),
+                                    title='Select a command book',
+                                    filetypes=[('*.py', '*.py')])
         if file_path:
             config.bot.load_commands(file_path)
 
