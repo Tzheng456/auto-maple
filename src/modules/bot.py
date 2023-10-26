@@ -118,7 +118,7 @@ class Bot(Configurable):
         move(*self.rune_pos).execute()
         adjust = self.command_book['adjust']
         adjust(*self.rune_pos).execute()
-        time.sleep(0.2)
+        time.sleep(1)
         press(self.config['Interact'], 2, down_time=0.2)        # Inherited from Configurable
 
         print('\nSolving rune:')
